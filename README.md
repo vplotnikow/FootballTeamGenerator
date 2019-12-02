@@ -1,9 +1,10 @@
 # Football Team Generator
 Generates Random Football Teams Up To 4 Players
 
-V1.0 Download: https://github.com/vplotnikow/FootballTeamGenerator/blob/master/releases/V1.0.zip?raw=true
+# V1.0
+https://github.com/vplotnikow/FootballTeamGenerator/blob/master/releases/V1.0.zip?raw=true
 ---------------------------------------------------------------------------------------------------------
-Features:
+# Features:
 1. Command-Line Arguments
 The programm can be started with up to 4 command-line arguments, which represents the player names.
 For example: ".\FootballTeamGeneratorV1.0.exe Player1 Player2 Player3 Player4"
