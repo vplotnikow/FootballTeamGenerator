@@ -45,7 +45,7 @@ namespace FootballTeamGenerator
                     namenDerSpieler[i] = Console.ReadLine();
                     while (namenDerSpieler[i] == "")
                     {
-                        Console.WriteLine("Der Feld kann nicht leer sein! Sie müssen einen Namen eingeben!");
+                        Console.WriteLine("Das Feld kann nicht leer sein! Sie müssen einen Namen eingeben!");
                         namenDerSpieler[i] = Console.ReadLine();
                     }
                 }
