@@ -12,6 +12,7 @@ namespace FootballTeamGenerator
         {
             args = Textfile.ReadLines(args);
             Player.Input(args);
+            Textfile_Teams.ImportTeams();
             Player.TeamNumber();
             Player.Output();
             Console.WriteLine("");
