@@ -10,9 +10,9 @@ namespace FootballTeamGenerator
     {
         static void Main(string[] args)
         {
-            args = Textfile.ReadLines(args);
+            args = Textfile_Player.ReadLines(args);
             Player.Input(args);
-            Textfile_Teams.ImportTeams();
+            Textfile_FootballTeams.ImportTeams();
             Player.TeamNumber();
             Player.Output();
             Console.WriteLine("");

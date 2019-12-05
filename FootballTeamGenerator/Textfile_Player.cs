@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FootballTeamGenerator
 {
-    class Textfile
+    class Textfile_Player
     {
         public static string[] ReadLines(string[] args)
         {

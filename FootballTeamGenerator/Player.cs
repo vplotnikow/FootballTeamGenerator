@@ -9,6 +9,12 @@ namespace FootballTeamGenerator
 {
     class Player
     {
+        String name;
+        public Player(String name)
+        {
+            name = this.name;
+        }
+
         public static int anzahlDerSpieler;
         static String[] namenDerSpieler = new String[anzahlDerSpieler];
         static String[] array = new String[anzahlDerSpieler];
@@ -72,8 +78,8 @@ namespace FootballTeamGenerator
 
         public static void Output()
         {
-            String country = Country.TeamBuilding();
-            String country2 = Country.TeamBuilding();
+            String country = FootballTeam.TeamBuilding();
+            String country2 = FootballTeam.TeamBuilding();
             if (anzahlDerSpieler == 2)
             {
                 Console.WriteLine("Team 1 (" + array[0] + ") = " + country);
