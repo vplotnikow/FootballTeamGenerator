@@ -1,15 +1,18 @@
 # Football Team Generator
 Generates Random Football Teams Up To 4 Players
 
-# Feature Preview V2.0
+## Feature Preview V2.0
 ---------------------------------------------------------------------------------------------------------
 - Customizable Football Teams:
 On the first start the programm will create a text file called "FootballTeams.txt", which contains all football teams, the generator will take into count, when it is creating new matches. This text file can be easily edited then, so one can remove or add new teams.
 
-# V1.0
-https://github.com/vplotnikow/FootballTeamGenerator/blob/master/releases/V1.0.zip?raw=true
+## V1.0
+ - [`V1.0.zip`][direct-dl]
+
+[direct-dl]: https://github.com/vplotnikow/FootballTeamGenerator/blob/master/releases/V1.0.zip
+
 ---------------------------------------------------------------------------------------------------------
-# Features:
+### Features:
 - Command-Line Arguments:
 The programm can be started with up to 4 command-line arguments, which represents the player names.
 For example: ".\FootballTeamGeneratorV1.0.exe Player1 Player2 Player3 Player4"
