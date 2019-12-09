@@ -11,7 +11,6 @@ On the first start the programm will create a text file called "FootballTeams.tx
 
 [direct-dl]: https://github.com/vplotnikow/FootballTeamGenerator/blob/master/releases/V1.0.zip?raw=true
 
----------------------------------------------------------------------------------------------------------
 ### Features:
 - Command-Line Arguments:
 The programm can be started with up to 4 command-line arguments, which represents the player names.
