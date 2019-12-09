@@ -8,7 +8,7 @@ On the first start the programm will create a text file called "FootballTeams.tx
 ## V1.0
  - [`V1.0.zip`][direct-dl]
 
-[direct-dl]: https://github.com/vplotnikow/FootballTeamGenerator/blob/master/releases/V1.0.zip?raw=true
+[direct-dl]: https://github.com/vplotnikow/FootballTeamGenerator/releases/download/1.0/FTG-V1.0.zip
 
 ### Features:
 - Command-Line Arguments:
