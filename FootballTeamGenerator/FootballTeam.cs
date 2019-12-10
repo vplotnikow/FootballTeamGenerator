@@ -8,16 +8,13 @@ namespace FootballTeamGenerator
 {
     class FootballTeam
     {
-        private String name;
 
-        public FootballTeam(String name)
-        {
-            this.name = name;
-        }
+        public static String[] country = { "England", "Österreich", "Belgien", "Bulgarien", "Tschechische Republik", "Dänemark",
+                "Finnland", "Frankreich", "Deutschland", "Griechenland", "Italien", "Norwegen", "Polen", "Portugal",  "Irland", "Rumänien",
+                "Russland", "Schottland", "Slowenien", "Spanien", "Schweden", "Schweiz", "Türkei",
+                "Wales", "Argentinien", "Brasilien", "Paraguay", "Uruguay", "Mexiko", "USA", "Kamerun", "China", "Australien",
+                "Ungarn", "Niederlande", "Nordirland", "Südafrika", "Peru", "Kolumbien", "Elfenbeinküste", "Ägypten", "Bolivien",
+                "Kanada", "Chile", "Ecuador", "Indien", "Venezuela" };
 
-        public override String ToString()
-        {
-            return name;
-        }
     }
 }
