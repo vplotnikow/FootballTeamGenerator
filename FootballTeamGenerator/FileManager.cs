@@ -12,6 +12,7 @@ namespace FootballTeamGenerator
         const String playernamesFilename = "Playernames.txt";
         const String FootballTeamsFilename = "FootballTeams.txt";
 
+
         public void WritingInATextfile(String[] Playernames)
         {
             File.WriteAllLines(@".\" + playernamesFilename, Playernames);
