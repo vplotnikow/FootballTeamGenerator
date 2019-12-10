@@ -45,14 +45,13 @@
   <ItemGroup>
     <Compile Include="FootballTeam.cs" />
     <Compile Include="Generator.cs" />
-    <Compile Include="InputOutputHandler.cs" />
-    <Compile Include="Match.cs" />
     <Compile Include="MatchMaker.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team.cs" />
-    <Compile Include="FileManager.cs" />
+    <Compile Include="Textfile_Player.cs" />
+    <Compile Include="Textfile_FootballTeams.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
