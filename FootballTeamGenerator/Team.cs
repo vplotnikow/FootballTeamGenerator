@@ -8,24 +8,26 @@ namespace FootballTeamGenerator
 {
     class Team
     {
-        public Team(Player player1, Player player2)
+        private List<Player> _player;
+        private FootballTeam _footballTeam;
+
+        public Team(List<Player> player, FootballTeam _footballTeam)
         {
+            this._player = player;
+            this._footballTeam = _footballTeam;
+        }
+
+        public override string ToString()
+        {
+            if (_player.Count == 1)
+            {
+                return this._player[0].ToString() + " = " + _footballTeam.ToString();
+            }
+
+            return this._player[0].ToString() +" & " +  this._player[1].ToString() + " = " + _footballTeam.ToString();
 
         }
 
-        //public Team(Player player3, Player player4)
-        //{
 
-        //}
-
-        public Team(Player player1)
-        {
-
-        }
-
-        //public Team(Player player2)
-        //{
-
-        //}
     }
 }
