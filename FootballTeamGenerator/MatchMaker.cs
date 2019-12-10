@@ -16,6 +16,6 @@ namespace FootballTeamGenerator
         public MatchMaker(Team team1, Team team2, FootballTeam footballteam)
         {
 
-        }
+        } 
     }
 }
