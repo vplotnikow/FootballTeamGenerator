@@ -12,12 +12,12 @@ namespace FootballTeamGenerator
         private int numberOfPlayers;
         private String[] Playernames;
 
-        public void ReadUserInput(string[] konsolenParameter)
+        public void ReadUserInput(string[] consoleParameter)
         {
-            if (konsolenParameter.Length != 0)
+            if (consoleParameter.Length != 0)
             {
-                numberOfPlayers = konsolenParameter.Length;
-                Playernames = konsolenParameter;
+                numberOfPlayers = consoleParameter.Length;
+                Playernames = consoleParameter;
             }
             else
             {
@@ -27,24 +27,24 @@ namespace FootballTeamGenerator
 
             while (numberOfPlayers != 2 && numberOfPlayers != 4)
             {
-                Console.WriteLine("Die Anzahl der Personen ist nicht passend. Geben Sie erneut die Personenanzahl ein.");
+                Console.WriteLine("The number of people is not suitable. Please enter the number of people again.");
                 numberOfPlayers = Convert.ToInt32(Console.ReadLine());
                 Playernames = new String[numberOfPlayers];
             }
 
-            Console.WriteLine("Okay, " + numberOfPlayers + " Spieler also.");
+            Console.WriteLine("Okay, " + numberOfPlayers + " Players");
             Console.WriteLine("");
 
-            if (konsolenParameter.Length == 0)
+            if (consoleParameter.Length == 0)
             {
-                Console.WriteLine("Gib nun bitte nacheinander die Spielernamen ein und bestätige nach jedem Namen mit Enter. \n");
+                Console.WriteLine("Please enter the playernames one by one and confirm after every name with the ENTER key. \n");
                 for (int i = 0; i < numberOfPlayers; i++)
                 {
-                    Console.WriteLine("Spieler " + (i + 1) + ":");
+                    Console.WriteLine("Player " + (i + 1) + ":");
                     Playernames[i] = Console.ReadLine();
                     while (Playernames[i] == "")
                     {
-                        Console.WriteLine("Das Feld kann nicht leer sein! Sie müssen einen Namen eingeben!");
+                        Console.WriteLine("The field cannot be empty. You have to enter a name.");
                         Playernames[i] = Console.ReadLine();
                     }
                 }

@@ -11,27 +11,27 @@ namespace FootballTeamGenerator
     {
         private Random Coincidence = new Random();
 
-        private String[] _defaultFootballTeams = { "England", "Österreich", "Belgien", "Bulgarien", "Tschechische Republik", "Dänemark",
-                            "Finnland", "Frankreich", "Deutschland", "Griechenland", "Italien", "Norwegen", "Polen", "Portugal",  "Irland", "Rumänien",
-                            "Russland", "Schottland", "Slowenien", "Spanien", "Schweden", "Schweiz", "Türkei",
-                            "Wales", "Argentinien", "Brasilien", "Paraguay", "Uruguay", "Mexiko", "USA", "Kamerun", "China", "Australien",
-                            "Ungarn", "Niederlande", "Nordirland", "Südafrika", "Peru", "Kolumbien", "Elfenbeinküste", "Ägypten", "Bolivien",
-                            "Kanada", "Chile", "Ecuador", "Indien", "Venezuela" };
+        private String[] _defaultFootballTeams = { "England", "Austria", "Belgium", "Bulgaria", "Czech Republic", "Denmark",
+                            "Finland", "France", "Germany", "Greece", "Italy", "Norway", "Poland", "Portugal",  "Ireland", "Romania",
+                            "Russia", "Scottland", "Slovenia", "Spain", "Sweden", "Schwiztzerland", "Turkey",
+                            "Wales", "Argentina", "Brazil", "Paraguay", "Uruguay", "Mexiko", "USA", "Cameroon", "China", "Australia",
+                            "Hungary", "Netherlands", "Northern Ireland", "South Africa", "Peru", "Colombia", "vory Coast", "Egypt", "Bolivia",
+                            "Canada", "Chile", "Ecuador", "India", "Venezuela" };
 
-        public List<Player> PlayerGenerator(List<Player> playerliste)
+        public List<Player> PlayerGenerator(List<Player> playerlist)
         {
-            List<Player> playerliste1 = new List<Player>(playerliste);
-            for (int i = 0; i < playerliste.Count; i++)
+            List<Player> playerlist1 = new List<Player>(playerlist);
+            for (int i = 0; i < playerlist.Count; i++)
             {
-                int number = Coincidence.Next(0, playerliste.Count);
-                while (playerliste[number] == null)
+                int number = Coincidence.Next(0, playerlist.Count);
+                while (playerlist[number] == null)
                 {
-                    number = Coincidence.Next(0, playerliste.Count);
+                    number = Coincidence.Next(0, playerlist.Count);
                 }
-                playerliste1[i] = playerliste[number];
-                playerliste[number] = null;
+                playerlist1[i] = playerlist[number];
+                playerlist[number] = null;
             }
-            return playerliste1;
+            return playerlist1;
         }
 
         public FootballTeam GetRandomFootballTeam()
@@ -51,25 +51,25 @@ namespace FootballTeamGenerator
             FootballTeam footballteam1 = GetRandomFootballTeam();
             FootballTeam footballteam2 = GetRandomFootballTeam();
 
-            List<Player> playerlisteTeam1 = new List<Player>();
-            List<Player> playerlisteTeam2 = new List<Player>();
+            List<Player> playerlistTeam1 = new List<Player>();
+            List<Player> playerlistTeam2 = new List<Player>();
 
 
             if (playerliste.Count() == 2)
             {
-                playerlisteTeam1.Add(playerliste[0]);
-                playerlisteTeam2.Add(playerliste[1]);
+                playerlistTeam1.Add(playerliste[0]);
+                playerlistTeam2.Add(playerliste[1]);
             }
             else if (playerliste.Count() == 4)
             {
-                playerlisteTeam1.Add(playerliste[0]);
-                playerlisteTeam1.Add(playerliste[1]);
-                playerlisteTeam2.Add(playerliste[2]);
-                playerlisteTeam2.Add(playerliste[3]);
+                playerlistTeam1.Add(playerliste[0]);
+                playerlistTeam1.Add(playerliste[1]);
+                playerlistTeam2.Add(playerliste[2]);
+                playerlistTeam2.Add(playerliste[3]);
             }
 
-            Team team1 = new Team(playerlisteTeam1, footballteam1);
-            Team team2 = new Team(playerlisteTeam2, footballteam2);
+            Team team1 = new Team(playerlistTeam1, footballteam1);
+            Team team2 = new Team(playerlistTeam2, footballteam2);
 
             List<Team> teamList = new List<Team>();
             teamList.Add(team1);
