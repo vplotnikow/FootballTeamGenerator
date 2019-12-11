@@ -43,7 +43,7 @@ namespace FootballTeamGenerator
 
                     if (playernames.Length == 2)
                     {
-                        Console.WriteLine("Do you want to use the last entered playernames (" + playernames[0] + ", " + playernames[1] + ") ? Please reply with yes or no. ");
+                        Console.WriteLine("Do you want to use the last entered playernames (" + playernames[0] + ", " + playernames[1] + ")? Please reply with yes or no. ");
                     }
                     else if (playernames.Length == 4)
                     {

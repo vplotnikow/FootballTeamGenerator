@@ -27,7 +27,7 @@ namespace FootballTeamGenerator
 
             while (numberOfPlayers != 2 && numberOfPlayers != 4)
             {
-                Console.WriteLine("The number of people is not suitable. Please enter the number of people again.");
+                Console.WriteLine("The number of people is incorrect. Please enter the number of people again.");
                 numberOfPlayers = Convert.ToInt32(Console.ReadLine());
                 Playernames = new String[numberOfPlayers];
             }
@@ -37,7 +37,7 @@ namespace FootballTeamGenerator
 
             if (consoleParameter.Length == 0)
             {
-                Console.WriteLine("Please enter the playernames one by one and confirm after every name with the ENTER key. \n");
+                Console.WriteLine("Please enter the player names one by one and confirm after every name with the ENTER key. \n");
                 for (int i = 0; i < numberOfPlayers; i++)
                 {
                     Console.WriteLine("Player " + (i + 1) + ":");
