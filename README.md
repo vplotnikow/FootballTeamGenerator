@@ -3,7 +3,7 @@ Generates Random Football Teams Up To 4 Players
 
 ## Feature Preview V2.0
 - Customizable Football Teams:
-On the first start the programm will create a text file called "FootballTeams.txt", which contains all football teams, the generator will take into count, when it is creating new matches. This text file can be easily edited then, so one can remove or add new teams.
+On the first start the programm will create a text file called "FootballTeams.txt", which contains all football teams, the generator will take into count, when it is creating new matches. This text file can be easily edited then, so one can remove or add new football teams.
 
 ## V1.0
  - [`V1.0.zip`][direct-dl]
