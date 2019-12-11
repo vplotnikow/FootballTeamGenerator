@@ -31,6 +31,7 @@ namespace FootballTeamGenerator
                 playerlist1[i] = playerlist[number];
                 playerlist[number] = null;
             }
+
             return playerlist1;
         }
 
@@ -83,8 +84,5 @@ namespace FootballTeamGenerator
             get => _defaultFootballTeams;
             set => _defaultFootballTeams = value;
         }
-
-
-
     }
 }

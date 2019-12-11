@@ -38,5 +38,4 @@ namespace FootballTeamGenerator
             set => _team2 = value;
         }
     }
-
 }

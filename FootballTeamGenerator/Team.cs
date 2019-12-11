@@ -25,9 +25,6 @@ namespace FootballTeamGenerator
             }
 
             return this._player[0].ToString() +" & " +  this._player[1].ToString() + " = " + _footballTeam.ToString();
-
         }
-
-
     }
 }

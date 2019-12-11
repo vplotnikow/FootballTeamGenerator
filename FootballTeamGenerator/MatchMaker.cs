@@ -12,7 +12,6 @@ namespace FootballTeamGenerator
 
         public MatchMaker()
         {
-
         }
 
         public MatchMaker(List<Player> _playerliste)
@@ -21,8 +20,7 @@ namespace FootballTeamGenerator
         }
 
         public Match CreateMatch()
-        {
-            
+        {            
             Match match = new Match();
             Generator generator = new Generator();
             FileManager files = new FileManager();
@@ -34,12 +32,7 @@ namespace FootballTeamGenerator
               
             return match;
         }
-
-        
-                   
-
-    } 
-          
+    }           
 }    
 
 

@@ -51,10 +51,8 @@ namespace FootballTeamGenerator
 
                 FileManager manager = new FileManager();
                 manager.WritingInATextfile(Playernames);
-
             }
         }
-
 
         public List<Player> GetEnteredPlayers()
         {
@@ -67,9 +65,7 @@ namespace FootballTeamGenerator
             }
 
             return players;
-
         }
-
         public void ShowMatch(Match match)
         {
             Console.WriteLine(match);
@@ -77,10 +73,7 @@ namespace FootballTeamGenerator
 
         public void PrintingWelcomeText()
         {
-            Console.WriteLine(" --------------------------------------------------------------- {0}                                                             ___{0}  o__                                                o__    |   |\\ {0} /|          Welcome To The Football Team Generator!  /\\    |   | X\\{0} / > o                                                 <\\   |   | XX\\{0} ---------------------------------------------------------------", Environment.NewLine);
+            Console.WriteLine("---------------------------------------------------------------------{0}                                                             ___{0}  o__                                                 o__   |   |\\ {0} /|       Welcome To The Football Team Generator!     /\\    |   |X\\{0} / > o                                                 <\\   |   |XX\\{0}---------------------------------------------------------------------", Environment.NewLine);
         }
-
-
-
     }
 }
