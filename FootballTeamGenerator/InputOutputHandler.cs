@@ -75,7 +75,12 @@ namespace FootballTeamGenerator
             Console.WriteLine(match);
         }
 
-        
+        public void PrintingWelcomeText()
+        {
+            Console.WriteLine(" --------------------------------------------------------------- {0}                                                             ___{0}  o__                                                o__    |   |\\ {0} /|          Welcome To The Football Team Generator!  /\\    |   | X\\{0} / > o                                                 <\\   |   | XX\\{0} ---------------------------------------------------------------", Environment.NewLine);
+        }
+
+
 
     }
 }

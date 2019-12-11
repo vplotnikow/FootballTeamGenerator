@@ -12,6 +12,7 @@ namespace FootballTeamGenerator
         static void Main(string[] args)
         {
             InputOutputHandler inputOutputHandler = new InputOutputHandler();
+            inputOutputHandler.PrintingWelcomeText();
             args = FileManager.ReadPlayerLines(args);
             inputOutputHandler.ReadUserInput(args);
             List<Player> playerList = inputOutputHandler.GetEnteredPlayers();

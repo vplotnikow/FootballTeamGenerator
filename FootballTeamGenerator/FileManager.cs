@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace FootballTeamGenerator
 {
     class FileManager
@@ -31,17 +32,9 @@ namespace FootballTeamGenerator
             }
         }
 
-        public void PrintingTextfile()
-        {
-            string path = @".\FTG_Welcome_Logo.txt";
-            string readText = File.ReadAllText(path);
-            Console.WriteLine(readText);
-        }
-
         public static string[] ReadPlayerLines(string[] args)
         {
-            FileManager manager = new FileManager();
-            manager.PrintingTextfile();
+            
             if (args.Length == 0)
             {
                 if (File.Exists(@".\" + playernamesFilename) && new FileInfo(@".\" + playernamesFilename).Length != 0)
