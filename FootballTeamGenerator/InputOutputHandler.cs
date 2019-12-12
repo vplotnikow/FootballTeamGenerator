@@ -57,7 +57,7 @@ namespace FootballTeamGenerator
         public List<Player> GetEnteredPlayers()
         {
             List<Player> players = new List<Player>();
-            
+
             foreach (var name in Playernames)
             {
                 var newPlayer = new Player(name);
