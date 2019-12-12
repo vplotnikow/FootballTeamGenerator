@@ -68,20 +68,20 @@ namespace FootballTeamGenerator
         }
         public void ShowMatch(Match match)
         {
-            String Lines = "----------------------------";
+            String Lines = " ----------------------------";
             if (numberOfPlayers == 2)
             {
                 
-                Console.WriteLine(Lines.PadRight(42, '-'));
+                Console.WriteLine(Lines.PadRight(37, '-'));
                 Console.WriteLine(match);
-                Console.WriteLine(Lines.PadRight(42, '-'));
+                Console.WriteLine(Lines.PadRight(37, '-'));
             }
             if (numberOfPlayers == 4)
             {
 
-                Console.WriteLine(Lines.PadRight(52, '-'));
+                Console.WriteLine(Lines.PadRight(47, '-'));
                 Console.WriteLine(match);
-                Console.WriteLine(Lines.PadRight(52, '-'));
+                Console.WriteLine(Lines.PadRight(47, '-'));
             }
             
         }
