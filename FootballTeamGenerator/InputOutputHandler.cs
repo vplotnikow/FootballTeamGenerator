@@ -11,7 +11,7 @@ namespace FootballTeamGenerator
     {
         private int numberOfPlayers;
         private String[] Playernames;
-        private const string _welcomeText = "---------------------------------------------------------------------{0}                                                             ___{0}  o__                                                 o__   |   |\\ {0} /|       Welcome To The Football Team Generator!     /\\    |   |X\\{0} / > o                                                 <\\   |   |XX\\{0}---------------------------------------------------------------------";
+        private const string _welcomeText = "---------------------------------------------------------------------\n                                                             ___\n  o__                                                 o__   |   |\\ \n /|       Welcome To The Football Team Generator!     /\\    |   |X\\\n / > o                                                 <\\   |   |XX\\\n---------------------------------------------------------------------\n";
         private const string _incorrectNumberOfPeople = "The number of people is incorrect. Please enter the number of people again.";
         private const string _enterOfPlayerNames = "Please enter the player names one by one and confirm after every name with the ENTER key. \n";
         private const string _emptyField = "The field cannot be empty. You have to enter a name.";
@@ -61,7 +61,6 @@ namespace FootballTeamGenerator
         public List<Player> GetEnteredPlayers()
         {
             List<Player> players = new List<Player>();
-            
             foreach (var name in Playernames)
             {
                 var newPlayer = new Player(name);
@@ -72,10 +71,24 @@ namespace FootballTeamGenerator
         }
         public void ShowMatch(Match match)
         {
+            String horizontalline = " -";
+            String Team1 = match.Team1.ToString();
+            String Team2 = match.Team2.ToString();
+            int lineLength = match.Team1.ToString().Length;
 
-            Console.WriteLine(match);
+            if (Team1.Length > Team2.Length)
+            {
+                Team2.PadRight(Team1.Length, ' ');
+            }
+            else if (Team1.Length < Team2.Length)
+            {
+                Team1.PadRight(Team2.Length, ' ');
+            }
+            Console.WriteLine(horizontalline.PadRight(lineLength + 22, '-'));
+            Console.WriteLine("|      " + "Team 1: " + Team1.PadRight(lineLength + 7, ' ') + "|");
+            Console.WriteLine("|      " + "Team 2: " + Team2.PadRight(lineLength + 7, ' ') + "|");
+            Console.WriteLine(horizontalline.PadRight(lineLength + 22, '-'));
         }
-
         public void PrintingWelcomeText()
         {
             Console.WriteLine(_welcomeText);

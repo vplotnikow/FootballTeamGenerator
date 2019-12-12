@@ -23,7 +23,6 @@ namespace FootballTeamGenerator
             var match = matchMaker.CreateMatch();
 
             inputOutputHandler.ShowMatch(match);
-
             Console.WriteLine("\n" + _finalText);
    
             Console.ReadKey();

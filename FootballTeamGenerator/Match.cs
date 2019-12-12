@@ -23,7 +23,7 @@ namespace FootballTeamGenerator
 
         public override String ToString()
         {
-            return "| Team 1 " + _team1.ToString() + "|\n" + "| Team 2 " + _team2.ToString();
+            return _team1.ToString() + _team2.ToString();
         }
 
         public Team Team1    
@@ -38,5 +38,4 @@ namespace FootballTeamGenerator
             set => _team2 = value;
         }
     }
-
 }

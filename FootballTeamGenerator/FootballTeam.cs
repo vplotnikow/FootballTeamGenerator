@@ -17,7 +17,9 @@ namespace FootballTeamGenerator
 
         public override String ToString()
         {
+
             return name;
+
         }
     }
 }

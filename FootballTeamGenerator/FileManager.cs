@@ -52,6 +52,7 @@ namespace FootballTeamGenerator
                     else if (playernames.Length == 4)
                     {
                         Console.WriteLine(_lastEnteredPlayers + "(" + playernames[0] + ", " + playernames[1] + ", " + playernames[2] + ", " + playernames[3] + ")?" + _reply);
+
                     }
                     string answer = Console.ReadLine().ToLower();
                     if (answer == "yes" || answer == "y")
