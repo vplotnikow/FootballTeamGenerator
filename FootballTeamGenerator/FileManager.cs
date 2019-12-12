@@ -13,6 +13,10 @@ namespace FootballTeamGenerator
     {
         const String playernamesFilename = "Playernames.txt";
         const String FootballTeamsFilename = "FootballTeams.txt";
+        private const string _lastEnteredPlayers = "\nDo you want to use the last entered player names";
+        private const string _reply = "Please reply with yes or no.";
+        private const string _numberOfPeople = "With how many people do you want to play? (2 or 4)";
+
 
         public void WritingInATextfile(String[] Playernames)
         {
@@ -43,11 +47,12 @@ namespace FootballTeamGenerator
 
                     if (playernames.Length == 2)
                     {
-                        Console.WriteLine("\nDo you want to use the last entered playernames (" + playernames[0] + ", " + playernames[1] + ")? Please reply with yes or no. ");
+                        Console.WriteLine(_lastEnteredPlayers + "(" + playernames[0] + ", " + playernames[1] + ")?" + _reply);
                     }
                     else if (playernames.Length == 4)
                     {
-                        Console.WriteLine("\nDo you want to use the last entered playernames (" + playernames[0] + ", " + playernames[1] + ", " + playernames[2] + ", " + playernames[3] + ")? Please reply with yes or no. ");
+                        Console.WriteLine(_lastEnteredPlayers + "(" + playernames[0] + ", " + playernames[1] + ", " + playernames[2] + ", " + playernames[3] + ")?" + _reply);
+
                     }
                     string answer = Console.ReadLine().ToLower();
                     if (answer == "yes" || answer == "y")
@@ -60,14 +65,14 @@ namespace FootballTeamGenerator
 
                         if (args.Length == 0)
                         {
-                            Console.WriteLine("With how many people do you want to play? (2 or 4)");
+                            Console.WriteLine(_numberOfPeople);
 
                         }
                     }
                 }
                 else
                 {
-                    Console.WriteLine("With how many people do you want to play? (2 or 4)");
+                    Console.WriteLine(_numberOfPeople);
                 }
             }
             return args;

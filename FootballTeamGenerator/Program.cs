@@ -9,6 +9,8 @@ namespace FootballTeamGenerator
 {
     class Program
     {
+        private const string _finalText = "I wish both teams good luck and a good game!";
+
         static void Main(string[] args)
         {
             InputOutputHandler inputOutputHandler = new InputOutputHandler();
@@ -21,8 +23,7 @@ namespace FootballTeamGenerator
             var match = matchMaker.CreateMatch();
 
             inputOutputHandler.ShowMatch(match);
-
-            Console.WriteLine("\nI wish both teams good luck and a good game!");
+            Console.WriteLine("\n" + _finalText);
    
             Console.ReadKey();
         }

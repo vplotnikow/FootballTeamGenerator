@@ -11,6 +11,10 @@ namespace FootballTeamGenerator
     {
         private int numberOfPlayers;
         private String[] Playernames;
+        private const string _welcomeText = "---------------------------------------------------------------------{0}                                                             ___{0}  o__                                                 o__   |   |\\ {0} /|       Welcome To The Football Team Generator!     /\\    |   |X\\{0} / > o                                                 <\\   |   |XX\\{0}---------------------------------------------------------------------";
+        private const string _incorrectNumberOfPeople = "The number of people is incorrect. Please enter the number of people again.";
+        private const string _enterOfPlayerNames = "Please enter the player names one by one and confirm after every name with the ENTER key. \n";
+        private const string _emptyField = "The field cannot be empty. You have to enter a name.";
 
         public void ReadUserInput(string[] consoleParameter)
         {
@@ -27,7 +31,7 @@ namespace FootballTeamGenerator
 
             while (numberOfPlayers != 2 && numberOfPlayers != 4)
             {
-                Console.WriteLine("The number of people is incorrect. Please enter the number of people again.");
+                Console.WriteLine(_incorrectNumberOfPeople);
                 numberOfPlayers = Convert.ToInt32(Console.ReadLine());
                 Playernames = new String[numberOfPlayers];
             }
@@ -37,14 +41,14 @@ namespace FootballTeamGenerator
 
             if (consoleParameter.Length == 0)
             {
-                Console.WriteLine("Please enter the player names one by one and confirm after every name with the ENTER key. \n");
+                Console.WriteLine(_enterOfPlayerNames);
                 for (int i = 0; i < numberOfPlayers; i++)
                 {
                     Console.WriteLine("Player " + (i + 1) + ":");
                     Playernames[i] = Console.ReadLine();
                     while (Playernames[i] == "")
                     {
-                        Console.WriteLine("The field cannot be empty. You have to enter a name.");
+                        Console.WriteLine(_emptyField);
                         Playernames[i] = Console.ReadLine();
                     }
                 }
@@ -57,7 +61,6 @@ namespace FootballTeamGenerator
         public List<Player> GetEnteredPlayers()
         {
             List<Player> players = new List<Player>();
-
             foreach (var name in Playernames)
             {
                 var newPlayer = new Player(name);
@@ -68,7 +71,6 @@ namespace FootballTeamGenerator
         }
         public void ShowMatch(Match match)
         {
-
             String horizontalline = " -";
             String Team1 = match.Team1.ToString();
             String Team2 = match.Team2.ToString();
@@ -82,16 +84,14 @@ namespace FootballTeamGenerator
             {
                 Team1.PadRight(Team2.Length, ' ');
             }
-
             Console.WriteLine(horizontalline.PadRight(lineLength + 22, '-'));
             Console.WriteLine("|      " + "Team 1: " + Team1.PadRight(lineLength + 7, ' ') + "|");
             Console.WriteLine("|      " + "Team 2: " + Team2.PadRight(lineLength + 7, ' ') + "|");
             Console.WriteLine(horizontalline.PadRight(lineLength + 22, '-'));
         }
-
         public void PrintingWelcomeText()
         {
-            Console.WriteLine("---------------------------------------------------------------------{0}                                                             ___{0}  o__                                                 o__   |   |\\ {0} /|       Welcome To The Football Team Generator!     /\\    |   |X\\{0} / > o                                                 <\\   |   |XX\\{0}---------------------------------------------------------------------", Environment.NewLine);
+            Console.WriteLine(_welcomeText);
         }
     }
 }
