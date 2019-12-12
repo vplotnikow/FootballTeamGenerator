@@ -18,7 +18,7 @@ namespace FootballTeamGenerator
 
         public override String ToString()
         {
-            return name.PadRight(7, ' ');
+            return name;
         }
     }
 }

@@ -68,22 +68,25 @@ namespace FootballTeamGenerator
         }
         public void ShowMatch(Match match)
         {
-            String Lines = " ----------------------------";
-            if (numberOfPlayers == 2)
-            {
-                
-                Console.WriteLine(Lines.PadRight(37, '-'));
-                Console.WriteLine(match);
-                Console.WriteLine(Lines.PadRight(37, '-'));
-            }
-            if (numberOfPlayers == 4)
-            {
 
-                Console.WriteLine(Lines.PadRight(47, '-'));
-                Console.WriteLine(match);
-                Console.WriteLine(Lines.PadRight(47, '-'));
+            String horizontalline = " -";
+            String Team1 = match.Team1.ToString();
+            String Team2 = match.Team2.ToString();
+            int lineLength = match.Team1.ToString().Length;
+
+            if (Team1.Length > Team2.Length)
+            {
+                Team2.PadRight(Team1.Length, ' ');
             }
-            
+            else if (Team1.Length < Team2.Length)
+            {
+                Team1.PadRight(Team2.Length, ' ');
+            }
+
+            Console.WriteLine(horizontalline.PadRight(lineLength + 22, '-'));
+            Console.WriteLine("|      " + "Team 1: " + Team1.PadRight(lineLength + 7, ' ') + "|");
+            Console.WriteLine("|      " + "Team 2: " + Team2.PadRight(lineLength + 7, ' ') + "|");
+            Console.WriteLine(horizontalline.PadRight(lineLength + 22, '-'));
         }
 
         public void PrintingWelcomeText()

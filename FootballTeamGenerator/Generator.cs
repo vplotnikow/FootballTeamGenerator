@@ -13,7 +13,7 @@ namespace FootballTeamGenerator
 
         private String[] _defaultFootballTeams = { "England", "Austria", "Belgium", "Bulgaria", "Czech Republic", "Denmark",
                             "Finland", "France", "Germany", "Greece", "Italy", "Norway", "Poland", "Portugal",  "Ireland", "Romania",
-                            "Russia", "Scottland", "Slovenia", "Spain", "Sweden", "Schwiztzerland", "Turkey",
+                            "Russia", "Scottland", "Slovenia", "Spain", "Sweden", "Schwitzerland", "Turkey",
                             "Wales", "Argentina", "Brazil", "Paraguay", "Uruguay", "Mexiko", "USA", "Cameroon", "China", "Australia",
                             "Hungary", "Netherlands", "Northern Ireland", "South Africa", "Peru", "Colombia", "vory Coast", "Egypt", "Bolivia",
                             "Canada", "Chile", "Ecuador", "India", "Venezuela" };
