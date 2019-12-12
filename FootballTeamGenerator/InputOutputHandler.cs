@@ -11,7 +11,7 @@ namespace FootballTeamGenerator
     {
         private int numberOfPlayers;
         private String[] Playernames;
-        private const string _welcomeText = "---------------------------------------------------------------------{0}                                                             ___{0}  o__                                                 o__   |   |\\ {0} /|       Welcome To The Football Team Generator!     /\\    |   |X\\{0} / > o                                                 <\\   |   |XX\\{0}---------------------------------------------------------------------";
+        private const string _welcomeText = "---------------------------------------------------------------------\n                                                             ___\n  o__                                                 o__   |   |\\ \n /|       Welcome To The Football Team Generator!     /\\    |   |X\\\n / > o                                                 <\\   |   |XX\\\n---------------------------------------------------------------------\n";
         private const string _incorrectNumberOfPeople = "The number of people is incorrect. Please enter the number of people again.";
         private const string _enterOfPlayerNames = "Please enter the player names one by one and confirm after every name with the ENTER key. \n";
         private const string _emptyField = "The field cannot be empty. You have to enter a name.";
