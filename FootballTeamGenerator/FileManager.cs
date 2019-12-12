@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+
 
 namespace FootballTeamGenerator
 {
@@ -11,6 +13,10 @@ namespace FootballTeamGenerator
     {
         const String playernamesFilename = "Playernames.txt";
         const String FootballTeamsFilename = "FootballTeams.txt";
+        private const string _lastEnteredPlayers = "\nDo you want to use the last entered player names";
+        private const string _reply = "Please reply with yes or no.";
+        private const string _numberOfPeople = "With how many people do you want to play? (2 or 4)";
+
 
         public void WritingInATextfile(String[] Playernames)
         {
@@ -32,6 +38,7 @@ namespace FootballTeamGenerator
 
         public static string[] ReadPlayerLines(string[] args)
         {
+            
             if (args.Length == 0)
             {
                 if (File.Exists(@".\" + playernamesFilename) && new FileInfo(@".\" + playernamesFilename).Length != 0)
@@ -40,37 +47,32 @@ namespace FootballTeamGenerator
 
                     if (playernames.Length == 2)
                     {
-                        Console.WriteLine("Möchten Sie die zuletzt eingegebene Spielernamen (" + playernames[0] + ", " + playernames[1] + ") verwenden? Antworten Sie mit ja oder nein. ");
+                        Console.WriteLine(_lastEnteredPlayers + "(" + playernames[0] + ", " + playernames[1] + ")?" + _reply);
                     }
                     else if (playernames.Length == 4)
                     {
-                        Console.WriteLine("Möchten Sie die zuletzt eingegebene Spielernamen (" + playernames[0] + ", " + playernames[1] + ", " + playernames[2] + ", " + playernames[3] + ") verwenden? Antworten Sie mit ja oder nein. ");
+                        Console.WriteLine(_lastEnteredPlayers + "(" + playernames[0] + ", " + playernames[1] + ", " + playernames[2] + ", " + playernames[3] + ")?" + _reply);
                     }
-                    string antwort = Console.ReadLine().ToLower();
-                    if (antwort == "ja" || antwort == "j")
+                    string answer = Console.ReadLine().ToLower();
+                    if (answer == "yes" || answer == "y")
                     {
                         args = File.ReadAllLines(@".\" + playernamesFilename);
                     }
-                    else if (antwort == "nein" || antwort == "n")
+                    else if (answer == "no" || answer == "n")
                     {
                         File.WriteAllLines(@".\" + playernamesFilename, args);
+
                         if (args.Length == 0)
                         {
-                            Console.WriteLine("Willkommen zum Football Team Generator! Mit wie vielen Personen möchtest du spielen? (2 oder 4)");
+                            Console.WriteLine(_numberOfPeople);
+
                         }
                     }
                 }
-
                 else
                 {
-                    Console.WriteLine("Willkommen zum Football Team Generator! Mit wie vielen Personen möchtest du spielen? (2 oder 4)");
+                    Console.WriteLine(_numberOfPeople);
                 }
-                return args;
-            }
-
-            else
-            {
-                Console.WriteLine("Willkommen zum Football Team Generator!");
             }
             return args;
         }
