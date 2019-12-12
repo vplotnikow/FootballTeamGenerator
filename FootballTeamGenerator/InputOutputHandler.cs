@@ -12,7 +12,7 @@ namespace FootballTeamGenerator
         private int numberOfPlayers;
         private String[] Playernames;
         private const String versionNumber = "v2.0";
-        private const string _welcomeText = "---------------------------------------------------------------------" + versionNumber + "\n                                                             ___\n  o__                                                 o__   |   |\\ \n /|       Welcome To The Football Team Generator!     /\\    |   |X\\\n / > o                                                 <\\   |   |XX\\\n---------------------------------------------------------------------\n";
+        private const string _welcomeText = "-----------------------------------------------------------------" + versionNumber + "\n                                                             ___\n  o__                                                 o__   |   |\\ \n /|       Welcome To The Football Team Generator!     /\\    |   |X\\\n / > o                                                 <\\   |   |XX\\\n---------------------------------------------------------------------\n";
         private const string _incorrectNumberOfPeople = "The number of people is incorrect. Please enter the number of people again.";
         private const string _enterOfPlayerNames = "Please enter the player names one by one and confirm after every name with the ENTER key. \n";
         private const string _emptyField = "The field cannot be empty. You have to enter a name.";

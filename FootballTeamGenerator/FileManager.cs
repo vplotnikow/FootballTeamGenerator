@@ -13,8 +13,8 @@ namespace FootballTeamGenerator
     {
         const String playernamesFilename = "Playernames.txt";
         const String FootballTeamsFilename = "FootballTeams.txt";
-        private const string _lastEnteredPlayers = "\nDo you want to use the last entered player names";
-        private const string _reply = "Please reply with yes or no.";
+        private const string _lastEnteredPlayers = "Do you want to use the last entered player names";
+        private const string _reply = " Please reply with yes or no.";
         private const string _numberOfPeople = "With how many people do you want to play? (2 or 4)";
 
 
