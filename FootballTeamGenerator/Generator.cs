@@ -18,6 +18,7 @@ namespace FootballTeamGenerator
                             "Hungary", "Netherlands", "Northern Ireland", "South Africa", "Peru", "Colombia", "vory Coast", "Egypt", "Bolivia",
                             "Canada", "Chile", "Ecuador", "India", "Venezuela" };
 
+        // 
         public List<Player> PlayerGenerator(List<Player> playerlist)
         {
             List<Player> playerlist1 = new List<Player>(playerlist);

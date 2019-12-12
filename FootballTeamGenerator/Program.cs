@@ -22,7 +22,7 @@ namespace FootballTeamGenerator
 
             inputOutputHandler.ShowMatch(match);
 
-            Console.WriteLine("I wish both teams good luck and a good game!");
+            Console.WriteLine("\nI wish both teams good luck and a good game!");
    
             Console.ReadKey();
         }

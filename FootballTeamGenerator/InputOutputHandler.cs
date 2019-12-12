@@ -68,7 +68,22 @@ namespace FootballTeamGenerator
         }
         public void ShowMatch(Match match)
         {
-            Console.WriteLine(match);
+            String Lines = "----------------------------";
+            if (numberOfPlayers == 2)
+            {
+                
+                Console.WriteLine(Lines.PadRight(42, '-'));
+                Console.WriteLine(match);
+                Console.WriteLine(Lines.PadRight(42, '-'));
+            }
+            if (numberOfPlayers == 4)
+            {
+
+                Console.WriteLine(Lines.PadRight(52, '-'));
+                Console.WriteLine(match);
+                Console.WriteLine(Lines.PadRight(52, '-'));
+            }
+            
         }
 
         public void PrintingWelcomeText()

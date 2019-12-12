@@ -23,7 +23,7 @@ namespace FootballTeamGenerator
 
         public override String ToString()
         {
-            return "Team 1 " + _team1.ToString() + "\n" + "Team 2 " + _team2.ToString();
+            return "|    Team 1 " + _team1.ToString() + "\n" + "|    Team 2 " + _team2.ToString();
         }
 
         public Team Team1    
