@@ -1,9 +1,16 @@
 # Football Team Generator
 Generates Random Football Teams Up To 4 Players
 
-## Feature Preview V2.0
-- Customizable Football Teams:
-On the first start the programm will create a text file called "FootballTeams.txt", which contains all football teams, the generator will take into count, when it is creating new matches. This text file can be easily edited then, so one can remove or add new football teams.
+## V2.0
+ - [`V2.0.zip`][direct-dl]
+
+[direct-dl]: https://github.com/vplotnikow/FootballTeamGenerator/releases/download/2.0/FTG-V2.0.zip
+
+### Features:
+- on the first start of the program a textfile (FootballTeams.txt) will be created. The file contains all the national footballteams. You can easily remove or add footballteams by editing this file.
+- the default language is english now (more coming soon)
+- new welcome logo and prettier output
+- general refactoring and small bugfixes
 
 ## V1.0
  - [`V1.0.zip`][direct-dl]
