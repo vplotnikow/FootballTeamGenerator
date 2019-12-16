@@ -8,15 +8,15 @@ namespace FootballTeamGenerator
 {
     class MatchMaker
     {
-        private List<Player> _playerliste;
+        private List<Player> _playerlist;
 
         public MatchMaker()
         {
         }
 
-        public MatchMaker(List<Player> _playerliste)
+        public MatchMaker(List<Player> playerlist)
         {
-            this._playerliste = _playerliste;
+            this._playerlist = playerlist;
         }
 
         public Match CreateMatch()
@@ -25,7 +25,7 @@ namespace FootballTeamGenerator
             Generator generator = new Generator();
             FileManager files = new FileManager();
             files.ImportTeams(generator);
-            List<Team> teams = generator.CreateTeams(_playerliste);
+            List<Team> teams = generator.CreateTeams(_playerlist);
 
             match.Team1 = teams[0];
             match.Team2 = teams[1];
