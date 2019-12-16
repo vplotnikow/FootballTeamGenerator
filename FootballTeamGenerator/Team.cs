@@ -11,10 +11,10 @@ namespace FootballTeamGenerator
         private List<Player> _player;
         private FootballTeam _footballTeam;
 
-        public Team(List<Player> player, FootballTeam _footballTeam)
+        public Team(List<Player> player, FootballTeam footballTeam)
         {
             this._player = player;
-            this._footballTeam = _footballTeam;
+            this._footballTeam = footballTeam;
         }
 
         public override string ToString()
