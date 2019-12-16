@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FootballTeamGenerator
 {
-    class Generator
+    public class Generator
     {
         private Random Coincidence = new Random();
 

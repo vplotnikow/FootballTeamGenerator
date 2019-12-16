@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FootballTeamGenerator
 {
-    class Player
+    public class Player
     {
         private String name;
 

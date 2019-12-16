@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FootballTeamGenerator
 {
-    class Team
+    public class Team
     {
-        private List<Player> _player;
+        public List<Player> _player;
         private FootballTeam _footballTeam;
 
         public Team(List<Player> player, FootballTeam _footballTeam)

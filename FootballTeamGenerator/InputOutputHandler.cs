@@ -7,43 +7,44 @@ using System.IO;
 
 namespace FootballTeamGenerator
 {
-    class InputOutputHandler
+    public class InputOutputHandler
     {
-        private int numberOfPlayers;
-        private String[] Playernames;
+        public String[] Playernames;
         private const String versionNumber = "v2.0";
         private const string _welcomeText = "-----------------------------------------------------------------" + versionNumber + "\n                                                             ___\n  o__                                                 o__   |   |\\ \n /|       Welcome To The Football Team Generator!     /\\    |   |X\\\n / > o                                                 <\\   |   |XX\\\n---------------------------------------------------------------------\n";
         private const string _incorrectNumberOfPeople = "The number of people is incorrect. Please enter the number of people again.";
         private const string _enterOfPlayerNames = "Please enter the player names one by one and confirm after every name with the ENTER key. \n";
         private const string _emptyField = "The field cannot be empty. You have to enter a name.";
 
+        public int NumberOfPlayers { get; set; }
+
         public void ReadUserInput(string[] consoleParameter)
         {
             if (consoleParameter.Length != 0)
             {
-                numberOfPlayers = consoleParameter.Length;
+                NumberOfPlayers = consoleParameter.Length;
                 Playernames = consoleParameter;
             }
             else
             {
-                numberOfPlayers = Convert.ToInt32(Console.ReadLine());
-                Playernames = new String[numberOfPlayers];
+                NumberOfPlayers = Convert.ToInt32(Console.ReadLine());
+                Playernames = new String[NumberOfPlayers];
             }
 
-            while (numberOfPlayers != 2 && numberOfPlayers != 4)
+            while (NumberOfPlayers != 2 && NumberOfPlayers != 4)
             {
                 Console.WriteLine(_incorrectNumberOfPeople);
-                numberOfPlayers = Convert.ToInt32(Console.ReadLine());
-                Playernames = new String[numberOfPlayers];
+                NumberOfPlayers = Convert.ToInt32(Console.ReadLine());
+                Playernames = new String[NumberOfPlayers];
             }
 
-            Console.WriteLine("Okay, " + numberOfPlayers + " Players");
+            Console.WriteLine("Okay, " + NumberOfPlayers + " Players");
             Console.WriteLine("");
 
             if (consoleParameter.Length == 0)
             {
                 Console.WriteLine(_enterOfPlayerNames);
-                for (int i = 0; i < numberOfPlayers; i++)
+                for (int i = 0; i < NumberOfPlayers; i++)
                 {
                     Console.WriteLine("Player " + (i + 1) + ":");
                     Playernames[i] = Console.ReadLine();
