@@ -7,7 +7,7 @@ using System.IO;
 
 namespace FootballTeamGenerator
 {
-    class InputOutputHandler
+    public class InputOutputHandler
     {
         private int _numberOfPlayers;
         private string[] _playernames;
@@ -19,6 +19,19 @@ namespace FootballTeamGenerator
         private const string _emptyField = "The field cannot be empty. You have to enter a name.";
         private const string _nolettersorsc = "You can enter either 2 or 4 and no letters or special characters. Please try it again.";
         private bool cancellation;
+
+        public int NumberOfPlayers
+        {
+            get => _numberOfPlayers;
+            set => _numberOfPlayers = value;
+        }
+
+        public String[] Playernames
+        {
+            get => _playernames;
+            set => _playernames = value;
+        }
+
 
         public void ReadUserInput(string[] consoleParameter)
         {
@@ -39,13 +52,13 @@ namespace FootballTeamGenerator
                     try
                     {
                         _numberOfPlayers = Convert.ToInt32(Console.ReadLine());
-                        if(_numberOfPlayers != 2 && _numberOfPlayers != 4)
+                        if (_numberOfPlayers != 2 && _numberOfPlayers != 4)
                         {
                             throw new InvalidNumberOfPlayersException(_incorrectNumberOfPeople);
                         }
                         cancellation = true;
                     }
-                    catch(FormatException)
+                    catch (FormatException)
                     {
                         Console.WriteLine(_nolettersorsc);
                     }
